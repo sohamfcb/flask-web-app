@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bowler Stats</title>
+</head>
+<body>
+
+<h1>Bowler Stats</h1>
+
+<form action="/bowler_records" method="get">
+    <label>Enter the name of the bowler</label>
+    <input name="bowler"><br><br>
+    <input type="submit" value="Show Stats">
+</form>
+
+    {% if result %}
+        {% for i in result %}
+
+
+            <p>{{ result[i]['all'] }}</p>
+
+        {% endfor %}
+    {% endif %}
+
+</body>
+</html>

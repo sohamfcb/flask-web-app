@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Batsman Records</title>
+</head>
+<body>
+
+<h1>Batsman Stats</h1>
+
+<form action="/batsman_records" method="get">
+    <label>Enter the name of the batsman</label>
+    <input name="batsman"><br><br>
+    <input type="submit" value="Show Stats">
+</form>
+
+    {% if result %}
+        {% for i in result %}
+
+
+            <p>{{ result[i]['all'] }}</p>
+
+        {% endfor %}
+    {% endif %}
+
+</body>
+</html>
